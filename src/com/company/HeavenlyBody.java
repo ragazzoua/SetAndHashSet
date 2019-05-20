@@ -29,4 +29,8 @@ public class HeavenlyBody {
     public boolean addMoon(HeavenlyBody moon){
         return satelities.add(moon);
     }
+
+    public boolean equals(HeavenlyBody obj){
+
+    }
 }
