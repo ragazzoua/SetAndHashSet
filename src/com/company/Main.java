@@ -25,7 +25,7 @@ public class Main {
         planets.add(temp);
 
         HeavenlyBody tempMoon = new HeavenlyBody("Moon", 27);
-        tempMoon.addMoon(tempMoon);
+        temp.addMoon(tempMoon);// temp is still Earth
 
         temp = new HeavenlyBody("Mars", 687);
         solarSystem.put(temp.getName(), temp);
@@ -88,8 +88,14 @@ public class Main {
 
         HeavenlyBody body1 = solarSystem.get("Mars");
         System.out.println("Moons of " + body1.getName());
-        for (HeavenlyBody jupiterMoon : body1.getSatelities()) {
-            System.out.println("\t" + jupiterMoon.getName());
+        for (HeavenlyBody marsMoon : body1.getSatelities()) {
+            System.out.println("\t" + marsMoon.getName());
+        }
+
+        HeavenlyBody body2 = solarSystem.get("Earth");
+        System.out.println("Moons of " + body2.getName());
+        for (HeavenlyBody earthMoon : body2.getSatelities()) {
+            System.out.println("\t" + earthMoon.getName());
         }
 
         Set<HeavenlyBody> moons = new HashSet<>();
