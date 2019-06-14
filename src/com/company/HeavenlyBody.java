@@ -107,5 +107,10 @@ public abstract class HeavenlyBody {
             }
             return false;
         }
+
+        @Override
+        public String toString() {
+            return this.name + " : " + this.bodyType;
+        }
     }
 }
