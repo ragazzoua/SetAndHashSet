@@ -3,7 +3,7 @@ package com.company;
 import java.util.HashSet;
 import java.util.Set;
 
-public class HeavenlyBody {
+public abstract class HeavenlyBody {
     private final String name;
     private final double orbitalPeriod;
     private final Set<HeavenlyBody> satelities;
@@ -69,7 +69,7 @@ public class HeavenlyBody {
 
     @Override
     public final int hashCode() {
-        System.out.println("hashCode() called ");
+        //System.out.println("hashCode() called ");
         return this.name.hashCode() + 57 + this.bodyType.hashCode();
     }
 
